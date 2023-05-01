@@ -29,7 +29,7 @@ Logic::checkNumberofPermutations(std::vector<std::string> word_set,
 
     std::stringstream ss{sentence};
     std::string word;
-    std::vector<int> number_of_permutation;
+    int total_perm = 1;
 
     // Iterate over sentence
     while (std::getline(ss, word, ' ')) {
@@ -41,15 +41,9 @@ Logic::checkNumberofPermutations(std::vector<std::string> word_set,
           anagram_count++;
         }
       }
-      number_of_permutation.push_back(anagram_count);
+      total_perm = total_perm * anagram_count;
     }
-
-    // Compute the permutations by multiplying the number of count on each index
-    int total = 1;
-    for (auto index : number_of_permutation) {
-      total = index * total;
-    }
-    result.push_back(total);
+    result.push_back(total_perm);
   }
   return result;
 }
