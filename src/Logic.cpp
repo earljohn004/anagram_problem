@@ -3,7 +3,7 @@
 #include <iostream>
 #include <sstream>
 
-bool Logic::isAnagram(std::string first_word, std::string second_word) {
+bool Logic::is_anagram(std::string first_word, std::string second_word) {
 
   // Skip the checking if word is the same
   if (first_word == second_word)
@@ -21,7 +21,7 @@ bool Logic::isAnagram(std::string first_word, std::string second_word) {
 }
 
 std::vector<int>
-Logic::checkNumberofPermutations(std::vector<std::string> word_set,
+Logic::check_number_of_permutations(std::vector<std::string> word_set,
                                  std::vector<std::string> sentences) {
   std::vector<int> result{};
 
@@ -36,7 +36,7 @@ Logic::checkNumberofPermutations(std::vector<std::string> word_set,
       // Check anagram count per word
       int anagram_count = 1;
       for (auto item : word_set) {
-        if (isAnagram(word, item)) {
+        if (is_anagram(word, item)) {
           anagram_count++;
         }
       }

@@ -15,7 +15,7 @@
 
 TEST(test_case_0) {
   std::unique_ptr<Logic> logic = std::make_unique<Logic>();
-  auto result = logic->checkNumberofPermutations(
+  auto result = logic->check_number_of_permutations(
       {"the", "bats", "tabs", "in", "cat", "act"},
       {"cat the bats", "in the act", "act tabs in"});
   std::vector<int> expected_result = {4, 2, 4};
@@ -27,7 +27,7 @@ TEST(test_case_0) {
 
 TEST(test_case_1) {
   std::unique_ptr<Logic> logic = std::make_unique<Logic>();
-  auto result = logic->checkNumberofPermutations(
+  auto result = logic->check_number_of_permutations(
       {"star", "tars", "stay", "tay", "seed", "dees", "eesd", "rast", "date",
        "ate"},
       {"ate date stay", "rast tay star", "tay stay tars", "seed dees star",
