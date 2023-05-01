@@ -22,7 +22,7 @@ bool Logic::is_anagram(std::string first_word, std::string second_word) {
 
 std::vector<int>
 Logic::check_number_of_permutations(std::vector<std::string> word_set,
-                                 std::vector<std::string> sentences) {
+                                    std::vector<std::string> sentences) {
   std::vector<int> result{};
 
   for (auto sentence : sentences) {
