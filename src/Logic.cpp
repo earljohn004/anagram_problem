@@ -5,7 +5,7 @@
 
 bool Logic::isAnagram(std::string first_word, std::string second_word) {
 
-  // Skip the checking
+  // Skip the checking if word is the same
   if (first_word == second_word)
     return false;
 
@@ -36,8 +36,7 @@ Logic::checkNumberofPermutations(std::vector<std::string> word_set,
       // Check anagram count per word
       int anagram_count = 1;
       for (auto item : word_set) {
-        auto checkAnagram = isAnagram(word, item);
-        if (checkAnagram) {
+        if (isAnagram(word, item)) {
           anagram_count++;
         }
       }
